@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== GGICONS ===============-->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="../assets/css/styles.css">
+      <!--=============== Icon ===============-->
+      <link rel="icon" href="../assets/img/Icon/RPITSSR.ico" type="image/x-icon">
+
+      <title>HTML Programming</title>
+
+      
+   </head>
+   <body >
+      <div id="particles-js" style="height: 460%;"></div>
+      <div class="container" style="display: flex; text-align: center; justify-items: center;"></div>
+         <div class="main">
+               <h2>Special Characters & Symbols</h2>
+               <h4>Special Characters & Symbols គឺជាកូដដែលបានកំណត់ជាមុនសម្រាប់បង្ហាញតួអក្សរដែល
+                  ជាតួអក្សររក្សាទុកក្នុង HTML ឬតួអក្សរដែលពិបាកវាយបញ្ចូលដោយផ្ទាល់ពី Keyboard។ តួអក្សរទាំងនេះត្រូវបានតំណាងដោយ HTML Entities ដែលចាប់ផ្ដើមដោយ “&” និងបញ្ចប់ដោយសញ្ញាចុចកណ្តាល; ។ ហើយម្យ៉ាងទៀត សំរាប់ការដកឃ្លាតាមធម្មតា ទោះបីជាដកឃ្លាច្រើនប៉ុណ្ណា ក៏លទ្ធផលចេញដកឃ្លាតែមួយដែរ បើចង់ឲ្យចេញដកឃ្លាច្រើន ក៏ត្រូវសរសេរជា Entity ដែរ ។</h4>
+               <p>ឧទាហរណ៍៖ កាលណាសរសេរសញ្ញាតូចជាង នោះ HTML គិតថា វាជាកូដ HTML នោះវានឹងមិនបង្ហាញជាលទ្ធផលទេ ។ ដូចនេះ ត្រូវជំនួសវាដោយ Entity គឺត្រូវសរសេរ &​lt; ។</p>
+               <hr>
+               <h2>ហេតុអ្វីត្រូវប្រើតួអក្សរនិងនិមិត្តសញ្ញាពិសេស?</h2>
+               <p>1.	ដើម្បីបង្ហាញតួអក្សរដែលជាតួអក្សររក្សាទុកដូចជា &lt;, >, និង & ដោយមិនឱ្យវាត្រូវបានបកប្រែជាកូដ HTML ។</p>
+               <p>2.	ដើម្បីបង្ហាញនិមិត្តសញ្ញាពិសេសដូចជា ©, €, និងនិមិត្តសញ្ញាគណិតវិទ្យា។</p>
+               <p>3.	ដើម្បីគាំទ្រតួអក្សរឬនិមិត្តសញ្ញាផ្សេងៗដែលមិនអាចរកបានងាយៗនៅលើក្តារចុច។</p>
+               <p>•	តួអក្សរនិងនិមិត្តសញ្ញាដែលប្រើញឹកញាប់</p>
+               <div class="row">
+                  <div class="col-md-12">
+                     <table class="table table-bordered">
+                        <thead>
+                           <tr style="background-color: #afaeae;">
+                              <th class="thstyle">Character</th>
+                              <th class="thstyle">Entity Code</th>
+                              <th class="thstyle">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td class="thstyle">&</td>
+                              <td class="thstyle">&​amp;</td>
+                              <td class="thstyle">Ampersand</td>
+                           </tr>
+                           <tr>
+                              <td class="thstyle">&lt;</td>
+                              <td class="thstyle">&​lt;</td>
+                              <td class="thstyle">Less than</td>
+                           </tr>
+                           <tr>
+                              <td class="thstyle">&gt;</td>
+                              <td class="thstyle">&​gt;</td>
+                              <td class="thstyle">Greater than</td>
+                           </tr>
+                           <tr>
+                              <td class="thstyle">&quot;</td>
+                              <td class="thstyle">&quo​t;</td>
+                              <td class="thstyle">Double quote</td>
+                           </tr>
+                           <tr>
+                              <td class="thstyle">&apos;</td>
+                              <td class="thstyle">&​apos;</td>
+                              <td class="thstyle">Apostrophe (single quote)</td>
+                           </tr>
+                           <tr>
+                              <td class="thstyle">&copy;</td>
+                              <td class="thstyle">&​copy;</td>
+                              <td class="thstyle">Copyright symbol</td>
+                           </tr>
+                           <tr>
+                              <td class="thstyle">&reg;</td>
+                              <td class="thstyle">&​reg;</td>
+                              <td class="thstyle">Registered trademark</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <p>ឧទាហរណ៍៖ អនុវត្ត៖ &lt;p&gt; 5 &lt; 10 និង 20 &gt; 15 &lt;/p&gt; = 5 &lt;10 និង 20 &gt; 15 &lt;</p>
+            <!-- ======= textarea ======= -->
+            <div style="background: #888;">
+               <button style="margin-left: 5px;" onclick="handleButtonClick(this, 'html')">HTML</button>
+               <button onclick="handleButtonClick(this, 'css')">CSS</button>
+               <button onclick="handleButtonClick(this, 'js')">JavaScript</button>
+               <button onclick="handleButtonClick(this, 'result')">Show Result</button>
+               
+               <div id="html-container" class="textarea-container" style="display: flex;">
+                  <div class="line-numbers" id="html-lines"></div>
+                  <textarea id="html-code" oninput="updateLineNumbers('html')">
+&lt;p&gt; 5&lt; 10 និង 20 &gt; 15 &lt;/p&gt;</textarea>
+               </div>
+               <div id="css-container" class="textarea-container" style="display: none;">
+                  <div class="line-numbers" id="css-lines"></div>
+                  <textarea id="css-code" oninput="updateLineNumbers('css')"></textarea>
+               </div>
+               <div id="js-container" class="textarea-container" style="display: none;">
+                  <div class="line-numbers" id="js-lines"></div>
+                  <textarea id="js-code" oninput="updateLineNumbers('js')"></textarea>
+                  </div>
+               
+                  <div id="result"  style="display: none; margin-top: 20px; padding: 1px; border: 1px solid #ccc;">
+                    <iframe id="output-frame" style="width: 100%; height: 175px; border: none; background: #f4f4f4;"></iframe>
+                  </div>
+            </div>
+            <hr>
+               <p>•	និមិត្តសញ្ញាគណិតវិទ្យា</p>
+               <h4>HTML គាំទ្រការប្រើនិមិត្តសញ្ញាគណិតវិទ្យាជាច្រើន ៖</h4>
+               <div class="row">
+                  <div class="col-md-12">
+                     <table class="table table-bordered">
+                        <thead>
+                           <tr style="background-color: #afaeae;">
+                              <th class="thstyle">តួអក្សរ</th>
+                              <th class="thstyle">Entity Code</th>
+                              <th class="thstyle">Description</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td class="thstyle">±</td>
+                              <td class="thstyle">&​plusmn;</td>
+                              <td class="thstyle">Plus or minus</td>
+                           </tr>
+                           <tr>
+                              <td class="thstyle">×</td>
+                              <td class="thstyle">&​times;</td>
+                              <td class="thstyle">Multiplication</td>
+                           </tr>
+                           <tr>
+                              <td class="thstyle">÷</td>
+                              <td class="thstyle">&​divide;</td>
+                              <td class="thstyle">Division</td>
+                           </tr>
+                           <tr>
+                              <td class="thstyle">≥</td>
+                              <td class="thstyle">&​ge;</td>
+                              <td class="thstyle">Greater than or equal</td>
+                           </tr>
+                           <tr>
+                              <td class="thstyle">≤</td>
+                              <td class="thstyle">&​le;</td>
+                              <td class="thstyle">Less than or equal</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <p>ឧទាហរណ៍៖ អនុវត្ត៖ &lt;p&gt; 1 &ge; 0.9 និង a &le; A&lt;/p&gt;
+            <div style="background: #888;">
+               <button style="margin-left: 5px;" onclick="handleButtonShowClick(this, 'html-show')">HTML</button>
+               <button onclick="handleButtonShowClick(this, 'css-show')">CSS</button>
+               <button onclick="handleButtonShowClick(this, 'js-show')">JavaScript</button>
+               <button onclick="handleButtonShowClick(this, 'result-show')">Show Result</button>
+               
+               <div id="html-container-show" class="textarea-container-show" style="display: flex;">
+                  <div class="line-numbers-show" id="html-lines-show"></div>
+                  <textarea id="html-code-show" oninput="updateLineNumbersShow('html')">
+&lt;p&gt; 1 &ge; 0.9 និង a &le; A &lt;/p&gt;</textarea>
+               </div>
+               <div id="css-container-show" class="textarea-container-show" style="display: none;">
+                  <div class="line-numbers-show" id="css-lines-show"></div>
+                  <textarea id="css-code-show" oninput="updateLineNumbersShow('css')"></textarea>
+               </div>
+               <div id="js-container-show" class="textarea-container-show" style="display: none;">
+                  <div class="line-numbers-show" id="js-lines-show"></div>
+                  <textarea id="js-code-show" oninput="updateLineNumbersShow('js')"></textarea>
+               </div>
+            
+               <div id="result-show"  style="display: none; margin-top: 20px; padding: 1px; border: 1px solid #ccc;">
+                  <iframe id="output-frame-show" style="width: 100%; height: 138px; border: none; background: #f4f4f4;"></iframe>
+               </div>
+            </div>
+            <hr>
+            <h2>Lists (បញ្ជី)</h2>
+               <h4>Lists គឺជាវិធីដើម្បីដាក់តម្លៃដែលពាក់ព័ន្ធគ្នានៅក្នុងរចនាប័ទ្មដែលធ្វើអោយមានរបៀបរៀបរយ និងមានផាសុខភាពក្នុងការអាន។ វាត្រូវបានប្រើសម្រាប់បង្ហាញធាតុ ឬព័ត៌មានដែលត្រូវបានបញ្ចូលដោយអ្នកសរសេរ ។ </h4>
+               <p>•  Lists ត្រូវបានបែងចែកជា២គឺ</p>
+               <h5>-  Lists មានលំដាប់លំដោយ</h5>
+               <h5>-  Lists គ្មានលំដាប់លំដោយ</h5>
+               <p>•  Lists មានលំដាប់លំដោយ</p>
+               <h4>បញ្ជីមានលំដាប់លំដោយ គឺជាបញ្ជីដែលនៅពីមុខវាត្រូវបានចុះជាលំដាប់លេខ ឬលំដាប់អក្សរ ។ ដើម្បីបង្កើតបញ្ជីនេះ ត្រូវប្រើ &lt;ol&gt; ។ ពាក្យពេញរបស់ ol គឺ ordered list ។</h4>
+            <!-- 3 -->
+            <div style="background: #888;">
+               <button style="margin-left: 5px;" onclick="handleButtonShowTwoClick(this, 'html-show-two')">HTML</button>
+               <button onclick="handleButtonShowTwoClick(this, 'css-show-two')">CSS</button>
+               <button onclick="handleButtonShowTwoClick(this, 'js-show-two')">JavaScript</button>
+               <button onclick="handleButtonShowTwoClick(this, 'result-show-two')">Show Result</button>
+               
+               <div id="html-container-show-two" class="textarea-container-show-two" style="display: flex;">
+                  <div class="line-numbers-show-two" id="html-lines-show-two"></div>
+                  <textarea id="html-code-show-two" oninput="updateLineNumbersShowTwo('html')">
+&lt;ol&gt;
+   &lt;li&gt;បញ្ជីទី១&lt;/li&gt;
+   &lt;li&gt;បញ្ជីទី២&lt;/li&gt;
+   &lt;li&gt;បញ្ជីទី៣&lt;/li&gt;
+&lt;/ol&gt;</textarea>
+               </div>
+               <div id="css-container-show-two" class="textarea-container-show-two" style="display: none;">
+                  <div class="line-numbers-show-two" id="css-lines-show-two"></div>
+                  <textarea id="css-code-show-two" oninput="updateLineNumbersShowTwo('css')"></textarea>
+               </div>
+               <div id="js-container-show-two" class="textarea-container-show-two" style="display: none;">
+                  <div class="line-numbers-show-two" id="js-lines-show-two"></div>
+                  <textarea id="js-code-show-two" oninput="updateLineNumbersShowTwo('js')"></textarea>
+               </div>
+           
+               <div id="result-show-two"  style="display: none; margin-top: 20px; padding: 1px; border: 1px solid #ccc;">
+                  <iframe id="output-frame-show-two" style="width: 100%; height: 138px; border: none; background: #f4f4f4;"></iframe>
+               </div>
+            </div>
+            <hr>
+            <p>•  Lists គ្មានលំដាប់លំដោយ</p>
+            <h4>បញ្ជីគ្មានលំដាប់លំដោយ គឺជាបញ្ជីដែលនៅពីមុខវាត្រូវបានចុះជាត្រេ ឬចំនុច ឬរូបអ្វីផ្សេង ។ ដើម្បីបង្កើតបញ្ជីនេះ ត្រូវប្រើ &lt;ul&gt; ។ ពាក្យពេញរបស់ ul គឺ unordered list ។</h4>
+            <!-- 4 -->
+            <div style="background: #888;">
+               <button style="margin-left: 5px;" onclick="handleButtonShowFourClick(this, 'html-show-four')">HTML</button>
+               <button onclick="handleButtonShowFourClick(this, 'css-show-four')">CSS</button>
+               <button onclick="handleButtonShowFourClick(this, 'js-show-four')">JavaScript</button>
+               <button onclick="handleButtonShowFourClick(this, 'result-show-four')">Show Result</button>
+               
+               <div id="html-container-show-four" class="textarea-container-show-four" style="display: flex;">
+               <div class="line-numbers-show-four" id="html-lines-show-four"></div>
+               <textarea id="html-code-show-four" oninput="updateLineNumbersShowFour('html')">
+&lt;ul&gt;
+   &lt;li&gt;Coffee&lt;/li&gt;
+   &lt;li&gt;Tea&lt;/li&gt;
+   &lt;li&gt;Milk&lt;/li&gt;
+&lt;/ul&gt;</textarea>
+               </div>
+               <div id="css-container-show-four" class="textarea-container-show-four" style="display: none;">
+               <div class="line-numbers-show-four" id="css-lines-show-four"></div>
+               <textarea id="css-code-show-four" oninput="updateLineNumbersShowFour('css')"></textarea>
+               </div>
+               <div id="js-container-show-four" class="textarea-container-show-four" style="display: none;">
+               <div class="line-numbers-show-four" id="js-lines-show-four"></div>
+               <textarea id="js-code-show-four" oninput="updateLineNumbersShowFour('js')"></textarea>
+               </div>
+       
+               <div id="result-show-four"  style="display: none; margin-top: 20px; padding: 1px; border: 1px solid #ccc;">
+               <iframe id="output-frame-show-four" style="width: 100%; height: 138px; border: none; background: #f4f4f4;"></iframe>
+               </div>
+            </div>
+            <hr>
+               <h2>Table (តារាង)</h2>
+               <h4>Table ក្នុង HTML ត្រូវបានប្រើសម្រាប់រៀបចំ និងបង្ហាញទិន្នន័យដោយមានលក្ខណៈដាច់អាស្រ័យក្នុងទម្រង់ជាជួរដេក និងជួរឈរ។ វាជាឧបករណ៍ដែលធ្វើរការបង្ហាញព័ត៌មានជាច្រើនប្រភេទ ដូចជាសំណុំទិន្នន័យ, ការប្រៀបធៀប, និងប្លង់ផ្សេងៗ ។</h4>
+               <h4>+ មុននឹងបង្កើតតារាងបាន យើងត្រូវស្គាល់ពីប្រភេទ Tag ដែលត្រូវបង្កើតតារាងជាមុនសិន៖</h4>
+               <p>•	ផ្នែកក្បាលនៃតារាង</p>
+               <h4>ដើម្បីបង្កើតផ្នែកក្បាលនៃតារាង ត្រូវប្រើ &lt;thead&gt; ។ ពាក្យពេញនៃ thead គឹ table header ។</h4>
+               <p>•	ផ្នែកកណ្តាលនៃតារាង</p>
+               <h4>ដើម្បីបង្កើតផ្នែកកណ្តាលនៃតារាង ត្រូវប្រើ &lt;tbody&gt; ។ ពាក្យពេញនៃ tbody គឹ table body ។</h4>
+               <p>•	ផ្នែកក្រោយនៃតារាង</p>
+               <h4>ដើម្បីបង្កើតផ្នែកក្រោយនៃតារាង ត្រូវប្រើ &lt;tfoot&gt; ។ ពាក្យពេញនៃ tfoot គឹ table footer ។</h4>
+               <p>•	ជួរនៃតារាង</p>
+               <h4>ក្នុងការបង្កើតតារាង គឺត្រូវបង្កើតម្ដងមួយជួរដេកៗ ។ ជួរនីមួយៗត្រូវសរសេរនៅក្នុង  &lt;tr&gt; ។ ពាក្យពេញនៃ tr គឹ table row ។</h4>
+               <p>•	ប្រអប់នៃតារាង</p>
+               <h4>ប្រអប់នីមួយៗនៃតារាងត្រូវសរសេរនៅក្នុង &lt;td&gt; ។ ពាក្យពេញនៃ td គឹ table data ។ សំរាប់ប្រអប់នៃតារាងដែលស្ថិតនៅក្នុងផ្នែកក្បាលនៃតារាង គឺត្រូវប្រើ &lt;th&gt; ។ ពាក្យពេញនៃ th គឹ table head ។</h4>
+            <!-- 5 -->
+            <div style="background: #888;">
+               <button style="margin-left: 5px;" onclick="handleButtonShowFiveClick(this, 'html-show-five')">HTML</button>
+               <button onclick="handleButtonShowFiveClick(this, 'css-show-five')">CSS</button>
+               <button onclick="handleButtonShowFiveClick(this, 'js-show-five')">JavaScript</button>
+               <button onclick="handleButtonShowFiveClick(this, 'result-show-five')">Show Result</button>
+               
+               <div id="html-container-show-five" class="textarea-container-show-five" style="display: flex;">
+               <div class="line-numbers-show-five" id="html-lines-show-five"></div>
+               <textarea id="html-code-show-five" oninput="updateLineNumbersShowFive('html')">
+&lt;table&gt;   
+   &lt;tr&gt;
+      &lt;th&gt;Fiste Name&lt;/th&gt;
+      &lt;th&gt;Last Name&lt;/th&gt;
+      &lt;th&gt;Gander&lt;/th&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+      &lt;td&gt;Seng&lt;/td&gt;
+      &lt;td&gt;Dara&lt;/td&gt;
+      &lt;td&gt;Male&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+      &lt;td&gt;Sok&lt;/td&gt;
+      &lt;td&gt;Thida&lt;/td&gt;
+      &lt;td&gt;Female&lt;/td&gt;
+   &lt;/tr&gt;
+&lt;/table&gt;</textarea>
+               </div>
+               <div id="css-container-show-five" class="textarea-container-show-five" style="display: none;">
+               <div class="line-numbers-show-five" id="css-lines-show-five"></div>
+               <textarea id="css-code-show-five" oninput="updateLineNumbersShowFive('css')">
+table, th, td {
+   border: 1px solid black;
+}</textarea>
+               </div>
+               <div id="js-container-show-five" class="textarea-container-show-five" style="display: none;">
+               <div class="line-numbers-show-five" id="js-lines-show-five"></div>
+               <textarea id="js-code-show-five" oninput="updateLineNumbersShowFive('js')"></textarea>
+               </div>
+           
+               <div id="result-show-five"  style="display: none; margin-top: 20px; padding: 1px; border: 1px solid #ccc;">
+               <iframe id="output-frame-show-five" style="width: 100%; height: 138px; border: none; background: #f4f4f4;"></iframe>
+               </div>
+            </div>
+            <hr>
+            <!-- Button Next Page -->
+            <div style="display: flex; border-radius: 1px; margin-top: 50px;">
+               <button class="page" onclick="window.location.href='attribute.html'">Back Page</button>
+               <button class="page" style="margin-left: auto;" onclick="window.location.href='forms.html'">Next Page</button>
+            </div>
+         </div>
+      </div>
+
+      <!--=============== HEADER ===============-->
+      <header class="header">
+         <div class="header__container container">
+            <div class="header__toggle" id="header-toggle">
+               <span class="material-icons">menu</span> 
+            </div>
+            <marquee style="color: rgb(255, 255, 255);font-size: 35px;" scrollamount="10">SFE Programming ( Skill For Future Economic )</marquee>
+            <a href="#" class="header__logo" style="margin-left: 30px;">
+               <img src="../assets/img/Photo.png" alt="">
+            </a>
+         </div>
+      </header>
+
+      <!--=============== SIDEBAR ===============-->
+      <div class="sidebar" id="sidebar">
+         <nav class="sidebar__container">
+            <div class="sidebar__logo-text">
+               <h1><span class="color1 ">SFE</span></h1>
+               <h1><span class="color3 ">Programming</span></h1>
+            </div>
+
+            <div class="sidebar__content">
+               <div class="sidebar__list">
+                  <a href="../index.html" class="sidebar__link">
+                     <i class="material-icons">home</i>
+                     <span class="sidebar__link-name">ទំព័រដើម</span>
+                     <span class="sidebar__link-floating">ទំព័រដើម</span>
+                  </a>
+
+                  <a href="explore.html" class="sidebar__link">
+                     <i class="material-icons">explore</i>
+                     <span class="sidebar__link-name">Explore</span>
+                     <span class="sidebar__link-floating">Explore</span>
+                  </a>
+
+                  <div class="iocn-link">
+                     <a href="" class="sidebar__link">
+                        <i class="material-icons">book</i>
+                        <span class="link_name">មេរៀនបណ្តុះបណ្តាល</span>
+                      </a>
+                      <ul class="sub-menu">
+                        <li><a href="html/index.html" class="sidebar__link">HTML</a></li>
+                        <li><a href="#" class="sidebar__link">CSS</a></li>
+                        <li><a href="#" class="sidebar__link">Java</a></li>
+                        <li><a href="#" class="sidebar__link">PHP</a></li>
+                     </ul>
+                  </div>
+                  <a href="tips.html" class="sidebar__link">
+                     <i class="material-icons">tips_and_updates</i>
+                     <span class="sidebar__link-name">Tips</span>
+                     <span class="sidebar__link-floating">Tips</span>
+                  </a>
+
+                  <a href="subscribe.html" class="sidebar__link">
+                     <i class="material-icons">subscriptions</i>
+                     <span class="sidebar__link-name">Subscribe</span>
+                     <span class="sidebar__link-floating">subscribe</span>
+                  </a>
+
+                  <a href="about.html" class="sidebar__link">
+                     <i class="material-icons">account_circle</i>
+                     <span class="sidebar__link-name">About</span>
+                     <span class="sidebar__link-floating">About</span>
+                  </a>
+                                    
+                  <h3 class="sidebar__title">
+                     <span>SFE</span>
+                  </h3>
+
+                  <!--=============== MAIN ===============-->
+                  <main class=" container" id="main"></main>
+               </div>
+            </div>
+         </nav>
+      </div>
+      <script src="../assets/js/textarea.js"></script>
+      <!--=============== PARTICLES JS ===============-->
+      <script src="../assets/js/particles.js"></script>
+      <!--=============== app JS ===============-->
+      <script src="../assets/js/app.js"></script>
+      <!--=============== MAIN JS ===============-->
+      <script src="../assets/js/main.js"></script>
+   </body>
+</html>
