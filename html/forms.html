@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== GGICONS ===============-->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="../assets/css/styles.css">
+      <!--=============== Icon ===============-->
+      <link rel="icon" href="../assets/img/Icon/RPITSSR.ico" type="image/x-icon">
+
+      <title>HTML Programming</title>
+
+      
+   </head>
+   <body >
+      <div id="particles-js" style="height: 440%;"></div>
+      <div class="container" style="display: flex; text-align: center; justify-items: center;"></div>
+         <div class="main">
+               <h2>Introduction to Forms</h2>
+               <h4>HTML Forms គឺជាបច្ចេកទេសសំខាន់មួយក្នុងការអភិវឌ្ឍន៍វេបសាយ ដើម្បីអាចទាក់ទងនឹងអ្នកប្រើប្រាស់ដោយប្រមូល និងផ្ញើទិន្នន័យ។ Form ត្រូវបានប្រើសម្រាប់ការងារដូចជា ចុះឈ្មោះ, ចូលគណនី, ផ្តល់មតិ, និងផ្សេងៗទៀត ។</p>
+               <p>•	នៅក្នុង html forms មានធាតុមួយចំនួនដូចជា៖</p>
+               <h5>-	&lt;form&gt; tag</h5>
+               <h5>-	Action Attribute</h5>
+               <h5>-	Method Attribute</h5>
+            <hr>
+               <h2>&lt;form&gt; tag</h2>
+               <h4>&lt;Form&gt; Tag គឺជាធាតុដែលប្រើជាប្រអប់សម្រាប់ផ្ទុកឧបករណ៍បញ្ចូលទិន្នន័យដូចជា input, checkbox, radio button, និង button។ វាកំណត់រចនាសម្ព័ន្ធ និងអាកប្បកិរិយារបស់ Form ។</h4>
+               <p>ឧទាហរណ៍៖ អនុវត្ត៖ បង្កើត form មួយសម្រាប់ Submit ។</p>
+            <!-- ======= textarea ======= -->
+            <div style="background: #888;">
+               <button style="margin-left: 5px;" onclick="handleButtonClick(this, 'html')">HTML</button>
+               <button onclick="handleButtonClick(this, 'css')">CSS</button>
+               <button onclick="handleButtonClick(this, 'js')">JavaScript</button>
+               <button onclick="handleButtonClick(this, 'result')">Show Result</button>
+               
+               <div id="html-container" class="textarea-container" style="display: flex;">
+                  <div class="line-numbers" id="html-lines"></div>
+                  <textarea id="html-code" oninput="updateLineNumbers('html')">
+&lt;form&gt;
+   &lt;label for="name"&gt;ឈ្មោះ:&lt;/label&gt;
+   &lt;input type="text" name="fname"&gt;
+   &lt;br&gt;
+   &lt;label for="email"&gt;អ៊ីមែល:&lt;/label&gt;
+   &lt;input type="email" name="email"&gt;
+   &lt;br&gt;
+   &lt;label for="phone"&gt;ទូរស័ព្ទ:&lt;/label&gt;
+   &lt;input type="tel" name="phone"&gt;
+   &lt;br&gt;
+   &lt;button type="Submit"&gt;Button&lt;/button&gt;
+&lt;/form&gt;</textarea>
+               </div>
+               <div id="css-container" class="textarea-container" style="display: none;">
+                  <div class="line-numbers" id="css-lines"></div>
+                  <textarea id="css-code" oninput="updateLineNumbers('css')">
+form {
+   display: block;
+   margin-top: 20px;
+   padding: 10px;
+   border: 1px solid #ccc;
+}</textarea>
+               </div>
+               <div id="js-container" class="textarea-container" style="display: none;">
+                  <div class="line-numbers" id="js-lines"></div>
+                  <textarea id="js-code" oninput="updateLineNumbers('js')"></textarea>
+                  </div>
+               
+                  <div id="result"  style="display: none; margin-top: 20px; padding: 1px; border: 1px solid #ccc;">
+                    <iframe id="output-frame" style="width: 100%; height: 175px; border: none; background: #f4f4f4;"></iframe>
+                  </div>
+            </div>
+            <hr>
+               <h2>Action Attribute</ហ>
+               <h4>action បញ្ជាក់អាសយដ្ឋាន URL ឬ Endpoint ដែលទិន្នន័យនឹងត្រូវផ្ញើចូលទៅបន្ទាប់ពីបញ្ចូល Form។</h4>
+               <p>•	ប្រសិនបើ action ជាផ្លូវទាក់ទង សកម្មភាពនឹងត្រូវបញ្ជូនទៅផ្លូវនោះនៅលើដែនដីបច្ចុប្បន្ន។</p>
+               <p>•	ប្រសិនបើទទេ (empty) Form នឹងបញ្ចូនទៅទំព័របច្ចុប្បន្ន។</p>
+               <p>•	ប្រសិនបើជា URL ពេញលេញ ទិន្នន័យនឹងត្រូវបញ្ចូនទៅអាសយដ្ឋានខាងក្រៅ។</p>
+               <p>ឧទាហរណ៍៖ អនុវត្ត៖ បង្កើត Form ហើយរួចធ្វើរការដាក់ URL ទៅកាន់ទីតាំងណាមួយជាក់លាក់ ។
+            <div style="background: #888;">
+               <button style="margin-left: 5px;" onclick="handleButtonShowClick(this, 'html-show')">HTML</button>
+               <button onclick="handleButtonShowClick(this, 'css-show')">CSS</button>
+               <button onclick="handleButtonShowClick(this, 'js-show')">JavaScript</button>
+               <button onclick="handleButtonShowClick(this, 'result-show')">Show Result</button>
+               
+               <div id="html-container-show" class="textarea-container-show" style="display: flex;">
+                  <div class="line-numbers-show" id="html-lines-show"></div>
+                  <textarea id="html-code-show" oninput="updateLineNumbersShow('html')">
+&lt;form action="https://example.com/process-form" method="post"&gt; 
+   &lt;label for="name"&gt;ឈ្មោះ:&lt;/label&gt;
+   &lt;input type="text" name="fname"&gt;
+   &lt;br&gt;
+   &lt;label for="email"&gt;អ៊ីមែល:&lt;/label&gt;
+   &lt;input type="email" name="email"&gt;
+   &lt;br&gt;
+   &lt;label for="phone"&gt;ទូរស័ព្ទ:&lt;/label&gt;
+   &lt;input type="tel" name="phone"&gt;
+   &lt;br&gt;
+   &lt;button type="Submit"&gt;Button&lt;/button&gt;
+&lt;/form&gt;</textarea>
+               </div>
+               <div id="css-container-show" class="textarea-container-show" style="display: none;">
+                  <div class="line-numbers-show" id="css-lines-show"></div>
+                  <textarea id="css-code-show" oninput="updateLineNumbersShow('css')"></textarea>
+               </div>
+               <div id="js-container-show" class="textarea-container-show" style="display: none;">
+                  <div class="line-numbers-show" id="js-lines-show"></div>
+                  <textarea id="js-code-show" oninput="updateLineNumbersShow('js')"></textarea>
+               </div>
+            
+               <div id="result-show"  style="display: none; margin-top: 20px; padding: 1px; border: 1px solid #ccc;">
+                  <iframe id="output-frame-show" style="width: 100%; height: 138px; border: none; background: #f4f4f4;"></iframe>
+               </div>
+            </div>
+            <hr>
+            <h2>Method Attribute</h2>
+               <h4>method បញ្ជាក់របៀបផ្ញើទិន្នន័យ Form ទៅម៉ាស៊ីនមេ។ មានតម្លៃសំខាន់ 2 គឺ៖</h4>
+               <h4>1.	GET Method: នឹងបញ្ជូនព័ត៌មានទាំងឡាយទៅកាន់ URL ដែលបានកំណត់ដោយ action attribute ។</h4>
+               <p>•	ល្អសម្រាប់សំណើរ (requests) ដែលគ្រាន់តែអាន (read-only) (ឧ. Form ស្វែងរក) </p>
+               <p>•	ទិន្នន័យត្រូវបានបង្ហាញនៅក្នុង URL ដូច្នេះមិនគួរប្រើសម្រាប់ទិន្នន័យសំងាត់។</p>
+               <h4>2.	POST Method: ជាវីធីមួយក្នុងការបញ្ជូនព័ត៌មានដែរ តែវានឹងមិនបង្ហាញព័ត៌មានទាំងនោះ ឲ្យឃើញយ៉ាងងាយដូច GET method នោះទេ ។ ជាទូទៅគេប្រើ POST method សំរាប់បញ្ជូនព័ត៌មានសម្ងាត់ដូចជា អក្សរសម្ងាត់ជាដើម ។</h4>
+               <p>•	ល្អសម្រាប់ទិន្នន័យសំងាត់ ឬទិន្នន័យមានបរិមាណច្រើន។</p>
+               <p>•	ទិន្នន័យមិនបង្ហាញនៅក្នុង URL។</p>
+            <!-- 3 -->
+            <div style="background: #888;">
+               <button style="margin-left: 5px;" onclick="handleButtonShowTwoClick(this, 'html-show-two')">HTML</button>
+               <button onclick="handleButtonShowTwoClick(this, 'css-show-two')">CSS</button>
+               <button onclick="handleButtonShowTwoClick(this, 'js-show-two')">JavaScript</button>
+               <button onclick="handleButtonShowTwoClick(this, 'result-show-two')">Show Result</button>
+               
+               <div id="html-container-show-two" class="textarea-container-show-two" style="display: flex;">
+                  <div class="line-numbers-show-two" id="html-lines-show-two"></div>
+                  <textarea id="html-code-show-two" oninput="updateLineNumbersShowTwo('html')">
+<!-- ប្រើប្រាស់ GET -->
+&lt;form action="/search" method="get"&gt; 
+   &lt;input type="text" name="query" placeholder="ស្វែងរក..."&gt;
+   &lt;button type="Submit"&gt;ស្វែងរក&lt;/button&gt;
+&lt;/form&gt;
+
+<!-- ប្រើប្រាស់ POST -->
+&lt;form action="/search" method="post"&gt; 
+   &lt;input type="text" name="username" placeholder="ឈ្មោះអ្នកប្រើ"&gt;
+   &lt;input type="password" name="password" placeholder="ពាក្យសម្ងាត់"&gt;
+   &lt;button type="Submit"&gt;ចូល&lt;/button&gt;
+&lt;/form&gt;</textarea>
+               </div>
+               <div id="css-container-show-two" class="textarea-container-show-two" style="display: none;">
+                  <div class="line-numbers-show-two" id="css-lines-show-two"></div>
+                  <textarea id="css-code-show-two" oninput="updateLineNumbersShowTwo('css')"></textarea>
+               </div>
+               <div id="js-container-show-two" class="textarea-container-show-two" style="display: none;">
+                  <div class="line-numbers-show-two" id="js-lines-show-two"></div>
+                  <textarea id="js-code-show-two" oninput="updateLineNumbersShowTwo('js')"></textarea>
+               </div>
+           
+               <div id="result-show-two"  style="display: none; margin-top: 20px; padding: 1px; border: 1px solid #ccc;">
+                  <iframe id="output-frame-show-two" style="width: 100%; height: 138px; border: none; background: #f4f4f4;"></iframe>
+               </div>
+            </div>
+            <hr>
+            <h3 class="note">Note:
+            <br>1.	&lt;input&gt; ជាធាតុដ៏សំខាន់មួយសម្រាប់បង្កើត form ដែលអាចទទួលព័ត៌មានពីអ្នកប្រើប្រាស់។ វាផ្តល់លទ្ធភាពដើម្បីបញ្ចូលទិន្នន័យ និងផ្ញើព័ត៌មានទៅកាន់មជ្ឈដ្ឋាន។
+            <br>2.	&lt;label&gt;
+            <br>•	វាប្រើសម្រាប់កំណត់ label សម្រាប់ input element មួយ។
+            <br>•	Label ជួយពង្រឹងភាពងាយស្រួលក្នុងការប្រើប្រាស់ (accessibility) ដោយធ្វើឲ្យអ្នកប្រើប្រាស់អាចចុចលើ label ដើម្បីផ្ដោតទៅលើ input field ដែលទាក់ទង។
+            <br>3.	for
+            <br>•	Attribute for ផ្សារភ្ជាប់ label ជាមួយ input element ដោយប្រើតម្លៃ id របស់ input។
+            <br>•	ក្នុងករណីនេះ, label ត្រូវបានភ្ជាប់ទៅ input ដែលមាន id="…"។
+            </h3>
+            <h4>⁜ ប្រអប់ជាច្រើនត្រូវបានបង្កើតឡើងដោយ &lt;input&gt; មានដូចជា៖</h4>
+            <div class="row">
+               <div class="col-md-12">
+                  <table class="table table-bordered">
+                     <thead>
+                        <tr style="background-color: #afaeae;">
+                           <th class="thstyle">attribute</th>
+                           <th class="thstyle">តម្លៃ</th>
+                           <th class="thstyle">Description</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td class="thstyle">accept</td>
+                           <td class="thstyle">image/* video/* ប្រភេទឯកសារផ្សេងទៀត</td>
+                           <td class="thstyle">ប្រភេទនៃឯកសារដែលអនុញ្ញាតឲ្យបញ្ចូលក្នុង &lt;input type="file" &gt;</td>
+                        </tr>
+                        <tr>
+                           <td class="thstyle">placeholder</td>
+                           <td class="thstyle">អក្សរ</td>
+                           <td class="thstyle">បង្ហាញអក្សរព្រាលៗ</td>
+                        </tr>
+                        <tr>
+                           <td class="thstyle">maxlength</td>
+                           <td class="thstyle">លេខ</td>
+                           <td class="thstyle">ចំនួនតួរអក្សរដែលអាចបញ្ចូលបាន</td>
+                        </tr>
+                        <tr>
+                           <td class="thstyle">mix</td>
+                           <td class="thstyle">លេខ (ប្រែប្រួលទៅតាមប្រភេទ)</td>
+                           <td class="thstyle">តម្លៃតិចបំផុត</td>
+                        </tr>
+                        <tr>
+                           <td class="thstyle">max</td>
+                           <td class="thstyle">លេខ (ប្រែប្រួលទៅតាមប្រភេទ)</td>
+                           <td class="thstyle">តម្លៃច្រើនបំផុត</td>
+                        </tr>
+                        <tr>
+                           <td class="thstyle">step</td>
+                           <td class="thstyle">លេខ</td>
+                           <td class="thstyle">ចំនួនដែលត្រូវដើរ នៅពេលដែលចុចលើប៊ូតុងឡើងចុះ</td>
+                        </tr>
+                        <tr>
+                           <td class="thstyle">name</td>
+                           <td class="thstyle">អក្សរ</td>
+                           <td class="thstyle">ឈ្មោះប្រអប់​ សម្រាប់ប្រើប្រាស់ពេលដែលចុចលើប៊ូតុងបញ្ចូន</td>
+                        </tr>
+                        <tr>
+                           <td class="thstyle">required</td>
+                           <td class="thstyle">គ្មាន</td>
+                           <td class="thstyle">បញ្ជាក់ថា ប្រអប់មួយ នឹងត្រូវបំពេញ</td>
+                        </tr>
+                        <tr>
+                           <td class="thstyle">value</td>
+                           <td class="thstyle">គ្មាន</td>
+                           <td class="thstyle">តម្លៃនៃប្រអប់នោះ</td>
+                        </tr>
+                        <tr>
+                           <td class="thstyle">autofocus</td>
+                           <td class="thstyle">អក្សរ ឬលេខ</td>
+                           <td class="thstyle">ប្រអប់នោះត្រូវតែដំណើរការដោយស្វ័យប្រវត្តិ</td>
+                        </tr>
+                        <tr>
+                           <td class="thstyle">checked</td>
+                           <td class="thstyle">គ្មាន</td>
+                           <td class="thstyle">ជ្រើសរើសដោយស្វ័យប្រវត្តិចំណុចឬប្រអប់គូសគ្រឺស</td>
+                        </tr>
+                        <tr>
+                           <td class="thstyle">readonly</td>
+                           <td class="thstyle">គ្មាន</td>
+                           <td class="thstyle">មិនអនុញ្ញាតឲកែប្រែតម្លៃ</td>
+                        </tr>
+                        <tr>
+                           <td class="thstyle">disabled</td>
+                           <td class="thstyle">គ្មាន</td>
+                           <td class="thstyle">បញ្ឈប់ដំណើរការ</td>
+                        </tr>
+                        <tr>
+                           <td class="thstyle">form</td>
+                           <td class="thstyle">លេខ</td>
+                           <td class="thstyle">បញ្ញាក់ id នៃ &lt;form&gt;</td>
+                        </tr>
+                        <tr>
+                           <td class="thstyle">type</td>
+                           <td class="thstyle">text
+                              <br>   password
+                              <br>   email
+                              <br>   tel
+                              <br>   checkboxl
+                              <br>   radio
+                              <br>   color
+                              <br>   date
+                              <br>   number
+                              <br>   url
+                              <br>   hidden
+                              <br>   file
+                              <br>   reset
+                              <br>   submit
+                           </td>
+                           <td class="thstyle">ប្រភេទ</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+
+            <hr>
+            <!-- Button Next Page -->
+            <div style="display: flex; border-radius: 1px; margin-top: 50px;">
+               <button class="page" onclick="window.location.href='characters.html'">Back Page</button>
+               <button class="page" style="margin-left: auto;" onclick="window.location.href='lists.html'">Next Page</button>
+            </div>
+         </div>
+      </div>
+
+      <!--=============== HEADER ===============-->
+      <header class="header">
+         <div class="header__container container">
+            <div class="header__toggle" id="header-toggle">
+               <span class="material-icons">menu</span> 
+            </div>
+            <marquee style="color: rgb(255, 255, 255);font-size: 35px;" scrollamount="10">SFE Programming ( Skill For Future Economic )</marquee>
+            <a href="#" class="header__logo" style="margin-left: 30px;">
+               <img src="../assets/img/Photo.png" alt="">
+            </a>
+         </div>
+      </header>
+
+      <!--=============== SIDEBAR ===============-->
+      <div class="sidebar" id="sidebar">
+         <nav class="sidebar__container">
+            <div class="sidebar__logo-text">
+               <h1><span class="color1 ">SFE</span></h1>
+               <h1><span class="color3 ">Programming</span></h1>
+            </div>
+
+            <div class="sidebar__content">
+               <div class="sidebar__list">
+                  <a href="../index.html" class="sidebar__link">
+                     <i class="material-icons">home</i>
+                     <span class="sidebar__link-name">ទំព័រដើម</span>
+                     <span class="sidebar__link-floating">ទំព័រដើម</span>
+                  </a>
+
+                  <div class="iocn-link">
+                     <a href="#" class="sidebar__link">
+                        <i class="material-icons">book</i>
+                        <span class="link_name">មេរៀនបណ្តុះបណ្តាល</span>
+                      </a>
+                      <ul class="sub-menu">
+                        <li><a href="index.html" class="sidebar__link">បង្កើត​គេហទំព័រ</a></li>
+                        <li><a href="tag.html" class="sidebar__link">ធាតុ (Tag)</a></li>
+                        <li><a href="attribute.html" class="sidebar__link">Attribute</a></li>
+                        <li><a href="characters.html" class="sidebar__link">Characters</a></li>
+                        <li><a href="forms.html" class="sidebar__link">Forms</a></li>
+                     </ul>
+                  </div>
+
+                  <a href="about.html" class="sidebar__link">
+                     <i class="material-icons">account_circle</i>
+                     <span class="sidebar__link-name">About</span>
+                     <span class="sidebar__link-floating">About</span>
+                  </a>
+                                    
+                  <h3 class="sidebar__title">
+                     <span>SFE</span>
+                  </h3>
+
+                  <!--=============== MAIN ===============-->
+                  <main class=" container" id="main"></main>
+               </div>
+            </div>
+         </nav>
+      </div>
+      <script src="../assets/js/textarea.js"></script>
+      <!--=============== PARTICLES JS ===============-->
+      <script src="../assets/js/particles.js"></script>
+      <!--=============== app JS ===============-->
+      <script src="../assets/js/app.js"></script>
+      <!--=============== MAIN JS ===============-->
+      <script src="../assets/js/main.js"></script>
+   </body>
+</html>
